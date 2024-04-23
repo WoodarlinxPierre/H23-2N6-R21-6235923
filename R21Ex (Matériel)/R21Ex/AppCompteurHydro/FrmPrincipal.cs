@@ -21,7 +21,7 @@ namespace AppCompteurHydro
             InitializeComponent();
             Text += APP_INFO;
 
-            //m_objCompteurHydro = new CompteurHydro();
+            m_objCompteurHydro = new CompteurHydro();
         }
         //==================================================================================================
         private void MnuFichierQuitter_Click(object sender, EventArgs e)
@@ -31,20 +31,20 @@ namespace AppCompteurHydro
         //==================================================================================================
         private void MnuOpérationConsommer100Kw_Click(object sender, EventArgs e)
         {
-            //m_objCompteurHydro.Consommer(100);
-            //lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+            m_objCompteurHydro.Consommer(100);
+            lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
         }
         //==================================================================================================
         private void MnuOpérationConsommer5000Kw_Click(object sender, EventArgs e)
         {
-            //m_objCompteurHydro.Consommer(5000);
-            //lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+            m_objCompteurHydro.Consommer(5000);
+            lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
         }
         //==================================================================================================
         private void MnuOpérationConsommationAléatoire_Click(object sender, EventArgs e)
         {
-            //m_objCompteurHydro.Consommer(m_objRandom.Next(200, 2500));
-            //lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+            m_objCompteurHydro.Consommer(m_objRandom.Next(200, 2500));
+            lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
