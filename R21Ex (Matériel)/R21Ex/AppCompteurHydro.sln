@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCompteurHydro", "AppCompteurHydro\AppCompteurHydro.csproj", "{3553181B-88C7-4AE9-81A6-C1093949D41A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3553181B-88C7-4AE9-81A6-C1093949D41A}.Debug|x86.ActiveCfg = Debug|x86
+		{3553181B-88C7-4AE9-81A6-C1093949D41A}.Debug|x86.Build.0 = Debug|x86
+		{3553181B-88C7-4AE9-81A6-C1093949D41A}.Release|x86.ActiveCfg = Release|x86
+		{3553181B-88C7-4AE9-81A6-C1093949D41A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71CB1EE4-2782-4681-A851-A16456577720}
+	EndGlobalSection
+EndGlobal
