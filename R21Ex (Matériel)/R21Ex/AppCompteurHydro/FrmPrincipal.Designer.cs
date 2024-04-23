@@ -34,8 +34,8 @@
             this.mnuOpération = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOpérationConsommer100Kw = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOpérationConsommer5250Kw = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblConsommation = new System.Windows.Forms.Label();
             this.mnuOpérationConsommationAléatoire = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblConsommation = new System.Windows.Forms.Label();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,14 @@
             this.mnuOpérationConsommer5250Kw.Text = "Consommer 5250 Kw";
             this.mnuOpérationConsommer5250Kw.Click += new System.EventHandler(this.MnuOpérationConsommer5000Kw_Click);
             // 
+            // mnuOpérationConsommationAléatoire
+            // 
+            this.mnuOpérationConsommationAléatoire.Name = "mnuOpérationConsommationAléatoire";
+            this.mnuOpérationConsommationAléatoire.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.mnuOpérationConsommationAléatoire.Size = new System.Drawing.Size(245, 22);
+            this.mnuOpérationConsommationAléatoire.Text = "Consommation aléatoire";
+            this.mnuOpérationConsommationAléatoire.Click += new System.EventHandler(this.MnuOpérationConsommationAléatoire_Click);
+            // 
             // lblConsommation
             // 
             this.lblConsommation.BackColor = System.Drawing.Color.Transparent;
@@ -102,14 +110,6 @@
             this.lblConsommation.TabIndex = 2;
             this.lblConsommation.Text = "000000";
             this.lblConsommation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mnuOpérationConsommationAléatoire
-            // 
-            this.mnuOpérationConsommationAléatoire.Name = "mnuOpérationConsommationAléatoire";
-            this.mnuOpérationConsommationAléatoire.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
-            this.mnuOpérationConsommationAléatoire.Size = new System.Drawing.Size(245, 22);
-            this.mnuOpérationConsommationAléatoire.Text = "Consommation aléatoire";
-            this.mnuOpérationConsommationAléatoire.Click += new System.EventHandler(this.MnuOpérationConsommationAléatoire_Click);
             // 
             // FrmPrincipal
             // 
@@ -124,6 +124,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ICompteurHydro ";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.mnuPrincipal.ResumeLayout(false);
             this.mnuPrincipal.PerformLayout();
             this.ResumeLayout(false);

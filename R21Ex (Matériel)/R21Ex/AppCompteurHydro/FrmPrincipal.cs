@@ -7,7 +7,7 @@ namespace AppCompteurHydro
     public partial class FrmPrincipal : Form
     {
         private Random m_objRandom = new Random();
-        public const string APP_INFO = "1111111";
+        public const string APP_INFO = "(materiel)";
 
         // TODO 01 : Ajouter une classe nommée CompteurHydro qui implémente l'interface ICompteurHydro
         // TODO 02 : Compléter le code de la classe afin qu'elle fonctionne correctement
@@ -45,6 +45,11 @@ namespace AppCompteurHydro
         {
             //m_objCompteurHydro.Consommer(m_objRandom.Next(200, 2500));
             //lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
