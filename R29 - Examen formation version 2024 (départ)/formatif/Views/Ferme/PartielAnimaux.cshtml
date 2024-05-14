@@ -1,0 +1,15 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Animal
+
+{
+    <tr>
+        <td><!-- Id -->@Model.Id </td>
+    <td><!-- <img src="/images/NOm.png" alt="Image d'animal"/> --><img src="/images/@(Model.Nom).png" alt="Image d'animal" /></td>
+    <td><!-- Nom -->@Model.Nom</td>
+    <td><!-- Poids -->@Model.Poids</td>
+    <td><!-- Nourriture -->@Model.Nourriture</td>
+    </tr>
+}

@@ -1,0 +1,114 @@
+﻿@* @model .... *@
+@model  List<Animal>
+@{
+    Layout = "_Layout";
+    Humain steve = new Humain() 
+    { 
+        Id = 1, 
+        Nom = "Steve", 
+        Description = "Steve est un homme simple qui aime les longues marches sur la plage, donner des coups de poing sur des arbres et enlever des animaux dans des conditions raisonnables." 
+    };
+    int j = 0;
+    double poidsM = 0;
+    foreach (var item in Model)
+    {
+        poidsM += item.Poids;
+    }
+    poidsM = poidsM / Model.Count;
+}
+
+<h2>Enclos de Steve</h2>
+
+<!--♥♥♥ Question 2 a) ♥♥♥-->
+<div class="row p-2 steve">
+    <div class="col-2 m-2">
+        <img src="~/images/steve.png" alt="Steve" class="img-fluid" />
+    </div>
+    <div class="col m-2">
+        <div class="row">
+            <div class="col-12">
+                <strong>Nom :</strong>
+                <!-- Mettre le nom ici -->
+                @steve.Nom
+            </div>
+            <div class="col-12">
+                <strong>Description :</strong>
+                <!-- Mettre la description ici-->
+                @steve.Description
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--♥♥♥ Question 2 b) ♥♥♥-->
+<div class="row p-2 steve">
+    <div class="col m-2">
+        Nombre d'animaux dans l'enclos :
+        <span class="answer"><!-- Mettre le nombre d'animaux ici -->
+            @Model.Count</span>
+    </div>
+    <div class="col m-2">
+        Moyenne du poids des animaux dans l'enclos :
+        <span class="answer"><!-- Mettre la moyenne du poids des animaux ici --> @poidsM</span>
+    </div>
+</div>
+
+<div class="row p-2 steve">
+    <div class="col m-2">
+        Est-ce que l'enclos est bondé ?
+        @if (Model.Count >=10)
+        {
+            <span class="answer"><!-- Afficher "Oui" l'enclos contient au moins 10 animaux, afficher "Non" sinon -->Oui</span>
+        }
+        else
+        {
+            <span class="answer"><!-- Afficher "Oui" l'enclos contient au moins 10 animaux, afficher "Non" sinon -->Non</span>
+        }
+
+    </div>
+    <div class="col m-2">
+        Poids (en kg) de l'animal le plus lourd :
+        <span class="answer"><!-- Mettre le poids le plus lourd ici -->@for (int i = 1; i < Model.Count-1; i++)
+            {
+                
+                if (Model[j].Poids < Model[i].Poids)
+                {
+                    j = i;
+                }
+            }
+            @Model[j].Poids
+        </span>
+    </div>
+</div>
+
+<div class="row p-2 steve">
+    <div class="col m-2">
+        Qui va s'occuper de l'enclos en l'absence de Steve ?
+        <span class="answer"><!-- Afficher les données dans le ViewBag à la clé "Enclos" --> @ViewBag.Enclos</span>
+    </div>
+</div>
+
+<!--♥♥♥ Question 2 c) ♥♥♥-->
+<h3>Animaux de Steve</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Type</th>
+            <th>Poids (kg)</th>
+            <th>Nourriture</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- Cette rangée permet d'afficher les informations d'un animal, mais on veut
+        afficher TOUS les animaux de la liste reçue -->
+     
+       @foreach (var item in Model)
+        {
+            <partial name="PartielAnimaux" for="@item" />
+        }
+
+    </tbody>
+</table>

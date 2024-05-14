@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_Layout";
+}
+<h2 class="text-center">Maison d'Alex</h2>
+
+<!-- Début de la rangée -->
+
+<div class="col-3">
+    <h3>Souhaits d'Alex :</h3>
+    <ul class="pad">
+        <li>Refaire la toiture</li>
+        <li>Mettre Steve dehors</li>
+        <li>Chasser les <span>zombies</span> de la cour</li>
+        <li>Adopter un chat</li>
+    </ul>
+</div>
+<div class="col">
+    <img src="~/images/alex_house.png" alt="Maison" class="img-fluid" />
+</div>
+
+<!-- Fin de la rangée -->
+
+@section Style {
+    <style>
+        /* Mettre vos règles CSS ici
+        Exemple :
+        .test {
+            color: blue;
+        }
+        */
+        .pad{
+            padding-left: 0;
+        }
+        span{
+            color:green;
+            
+        }
+        ul{
+            background-color: rgba(0,0,0,0.8);
+        }
+
+
+    </style>
+    
+} 
